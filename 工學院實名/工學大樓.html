@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>工學大樓</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/checkout/">
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="Content/form-validation.css" rel="stylesheet">
+    <link href="Content/covid.css" rel="stylesheet">
+    <!-- Select2 -->
+
+    <link rel="stylesheet" type="text/css" href="//select2.github.io/select2/select2-3.4.1/select2.css" />
+    <link rel="stylesheet" type="text/css" href="Content/select2-bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+</head>
+
+<body class="bg-light">
+    <header>
+
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+            <div class="container">
+                <a class="navbar-brand">體溫實名制填報</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                    aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+
+                    </ul>
+
+                    <!--
+                        <span class="text-right text-white">
+                        <a class="text-white" href="#"><i class="fa  fa-user" aria-hidden="true"></i>
+                            207410464 登出</a>
+                    </span>
+                    -->
+                    
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container" id="logo">
+        <div class="row" id="divcnt">
+
+            <div class="col-md-12 order-md-1">
+
+                <form class="needs-validation" novalidate method="post" action="" id="form1">
+                    <div class="mb-3 h2 text-center">
+                        <span class="text-primary">工學大樓</span>
+                    </div>
+                    
+                    
+                    <!-- <input type="hidden" name="actpps" id="actpps" value="" /> -->
+                    <div class="mb-3">
+
+                        
+                        <h3 class="text-success text-center" style="font-size:144px">
+                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                        </h3>
+                
+                    </div>
+                    
+                    
+                    <div class="mb-3 text-center h2" id="date">
+                        <label><span class="text-primary" >
+                            <script type="text/javascript">
+                                var time= new Date();
+
+                                var M=time.getMonth()+1;  //抓月份
+                                if(M<10) {
+                                    M="0"+M;
+                                }
+
+                                var d=time.getDate();  //抓日期
+                                if(d<10) {
+                                    d="0"+d;
+                                }
+
+                                var h=time.getHours();  //抓小時
+                                if(h<10) {
+                                    h="0"+h;
+                                }
+
+                                var m=time.getMinutes();  //抓分鐘
+                                if(m<10) {
+                                    m="0"+m;
+                                }
+
+                                var str=M+"-"+d+" "+h+":"+m;
+                                document.write(str);
+                            </script>                            
+                        </span></label>                        
+                    </div>
+                    
+                    <div class="mb-3 text-center h1" id="dvisec">
+                    </div>                    
+                    <script type='text/javascript'>
+                        
+                        var i = 100;
+                        var interval = setInterval(function () {
+                            
+                            $("#dvisec").text(i);
+                            i = i - 1;
+                            
+                            if (i == 0) {
+                                //clearInterval(interval);
+                                //alert("end");
+                                //$("#dvisec").addClass("text-danger");
+                                location.reload()
+                            }
+
+                        }, 600);
+                    </script>
+
+                    <p class="text-success">410999999 淡江人 , 您已完成填報體溫作業，感謝您對淡江防疫的支持。</p>
+
+                    <hr class="mb-4">
+
+                    <div class="validation-summary-valid" data-valmsg-summary="true">
+                        <ul>
+                        </ul>
+                    </div>
+                    <input name="__RequestVerificationToken" type="hidden"
+                        value="M7NgKe-8NKN9Ej09mm9DWF-wVfjZ2lmXQ0UYRq0ihvRNXMfX_l2SIbf2NWPz1llvGo2R8Q5ssfucno_FfqiQwR6-71M1" />
+                </form>
+            </div>
+        </div>
+
+
+
+        <p id="mb_desc" class="lead mt-3">
+            請務必每日誠實填寫紀錄，如因隱匿而造成日後防疫破口，將追究責任。
+
+        </p>
+        <p id="mb_tobtm" class="lead">請每日量測體溫，並上網填報 自主健康監測回報系統
+            
+        </p>
+        
+    </div>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2020 <a>淡江大學</a> <a>資訊處</a></p>
+        <ul class="list-inline">
+            <li>個資政策 隱私權政策 個人資料告知聲明</a></li>
+            <li></a></li>
+            <li></a></li>
+            <li>個資保護聯絡窗口：資訊處服務台</li>
+        </ul>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+
+    <!-- Select2 -->
+    <script src="//select2.github.io/select2/select2-3.4.1/select2.js"></script>
+    <script>
+        $('.select2').select2({
+            placeholder: ''
+        });
+    </script>
+    <script src="Scripts/form-validation.js"></script>
+
+    <!-- jquery-loading v1.3.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/jquery-easy-loading@1.3.0/dist/jquery.loading.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery-easy-loading@1.3.0/dist/jquery.loading.min.js"></script>
+
+
+</body>
+
+</html>
